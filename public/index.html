@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free SIM Call App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Free SIM-style Calling App</h1>
+      <p class="subtitle">
+        Start a private voice call by sharing a call ID (works on the web with internet,
+        no SIM balance required).
+      </p>
+
+      <section class="card">
+        <label for="displayName">Your name</label>
+        <input id="displayName" placeholder="e.g. Alex" maxlength="30" />
+
+        <label for="roomId">Call ID / Number</label>
+        <input id="roomId" placeholder="e.g. 555-1001" maxlength="20" />
+
+        <div class="actions">
+          <button id="joinCallBtn">Join Call</button>
+          <button id="endCallBtn" class="danger" disabled>End Call</button>
+        </div>
+      </section>
+
+      <section class="status" id="statusBox">Enter your details and join a call.</section>
+      <audio id="remoteAudio" autoplay></audio>
+      <audio id="localAudio" autoplay muted></audio>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
