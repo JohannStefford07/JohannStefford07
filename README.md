@@ -9,14 +9,48 @@ This is a lightweight free-calling prototype that lets two people make voice cal
 - No paid SIM balance needed (internet connection required)
 - Simple signaling server via Socket.IO
 
-## Run locally
+## How to open it in your browser (website)
 
-```bash
-npm install
-npm start
-```
+1. Install dependencies:
 
-Then open `http://localhost:3000` in two browsers/devices and join with the same Call ID.
+   ```bash
+   npm install
+   ```
+
+2. Start the app server:
+
+   ```bash
+   npm start
+   ```
+
+3. Open the website in your browser:
+
+   ```
+   http://localhost:3000
+   ```
+
+4. Test a call:
+   - Open the same URL in a second tab, second browser, or another device on the same network.
+   - Enter a name on both sides.
+   - Enter the same Call ID (example: `555-1001`) on both sides.
+   - Click **Join Call**.
+
+## Open from another device (same Wi‑Fi)
+
+- Find your computer's local IP (example `192.168.1.25`).
+- Start the app with host binding:
+
+  ```bash
+  HOST=0.0.0.0 npm start
+  ```
+
+- On your phone/another laptop, open:
+
+  ```
+  http://<your-local-ip>:3000
+  ```
+
+Example: `http://192.168.1.25:3000`
 
 ## Notes
 
